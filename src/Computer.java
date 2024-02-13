@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-public class Computer {
+public class Computer implements Comparable<Computer>{
     private String description;
     private int yearOfProduction;
     private BigDecimal price;
@@ -44,5 +44,16 @@ public class Computer {
                 ", yearOfProduction=" + yearOfProduction +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Computer otherComputer) {
+        //vychozí způsob řazení
+        //vrací záporné číslo, nulu nebo kladné číslo, pokud je objekt menší, roven nebo větší než druhý objekt
+        //záporné číslo pokud tento je před otherComputer
+        //nulu pokud jsou si rovni
+        //kladne cislo pokud tento pocitac je po otherComputer
+        //return 0;
+        return this.description.compareTo(otherComputer.description);
     }
 }

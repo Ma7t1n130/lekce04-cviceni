@@ -19,9 +19,11 @@ public class Main {
         Collections.sort(computers, Comparator.comparing(Computer::getYearOfProduction).reversed());
         computers.forEach(System.out::println);
         System.out.println("\n");
+
         Collections.sort(computers, Comparator.comparing(Computer::getPrice));
         computers.forEach(System.out::println);
         System.out.println("\n");
+
         computers.sort(Comparator.comparing(Computer::getPrice));
 
     }
