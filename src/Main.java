@@ -26,5 +26,13 @@ public class Main {
 
         computers.sort(Comparator.comparing(Computer::getPrice));
 
+        Collections.sort(computers);
+        computers.forEach(System.out::println);
+        System.out.println("\n");
+
+        Collections.sort(computers, new ComputerComparator());
+        computers.forEach(System.out::println);
+        System.out.println("\n");
+
     }
 }
